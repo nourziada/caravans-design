@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" href="images/favi-con.ico" type="image/x-icon">
+        	
+        <!-- Google Fonts -->	
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CPlayfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+        
+        <!-- Bootstrap Stylesheet -->	
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+            
+        <!-- Custom Stylesheets -->	
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" id="cpswitch" href="css/orange.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    
+    <style type="text/css">
+        .btn-orange, .btn-orange:focus {
+            background: #276ab0;
+            color: white;
+        }
+        .blog-post-img .main-mask .blog-post-info li .fa {
+            color: #276ab0;
+        }
+        .pages .pagination li:first-child a:hover
+        ,.pages .pagination li:last-child a:hover
+        ,.pages .pagination li a:hover
+        {
+            background: #276ab0;
+        }       
+    </style>
+    <body>
+        
+         <!--====== LOADER =====-->
+        <div class="loader"></div>
+    
+    
+        <!--======== SEARCH-OVERLAY =========-->       
+        <div class="overlay">
+            <a href="javascript:void(0)" id="close-button" class="closebtn">&times;</a>
+            <div class="overlay-content">
+                <div class="form-center">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search..." required />
+                                <span class="input-group-btn"><button type="submit" class="btn"><span><i class="fa fa-search"></i></span></button></span>
+                            </div><!-- end input-group -->
+                        </div><!-- end form-group -->
+                    </form>
+                </div><!-- end form-center -->
+            </div><!-- end overlay-content -->
+        </div><!-- end overlay -->      
+        <nav class="navbar navbar-default main-navbar navbar-custom navbar-white main-header" id="mynavbar-1" style="background: rgba(10,10,10,0.8) !important;">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" id="menu-button">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
+                        <div class="header-search hidden-lg">
+                            <a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a>
+                        </div>
+                        <a href="index.html" class="navbar-brand"><span>Cara</span>vans</a>
+                    </div><!-- end navbar-header -->
+                    
+                    <div class="collapse navbar-collapse" id="myNavbar1">
+                        <ul class="nav navbar-nav navbar-right navbar-search-link">
+                            <li class="dropdown active"><a href="index.html" class="dropdown-toggle a-menu" data-toggle="dropdown">Home</a>     
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle a-menu" data-toggle="dropdown">our fleet<span><i class="fa fa-angle-down"></i></span></a>
+                                <ul class="dropdown-menu">
+                                    <li style="background-color:#276AB0"><a href="All_Fleet.html" class="a-menu">all</a></li>
+                                    <li style="background-color:#276AB0"><a href="Deluxe.html" class="a-menu">Deluxe</a></li>
+                                    <li style="background-color:#276AB0"><a href="Deluxe+.html" class="a-menu">Deluxe+</a></li>
+                                    <li style="background-color:#276AB0"><a href="prestige.html" class="a-menu">Prestige</a></li>
+                                    <li style="background-color:#276AB0"><a href="Prestige+.html" class="a-menu">Prestige+</a></li>
+                                    <li style="background-color:#276AB0"><a href="Platinum.html" class="a-menu">Platinum</a></li>
+                                    <li style="background-color:#276AB0"><a href="Platinum+.html" class="a-menu">Platinum+</a></li>
+                                </ul>           
+                            </li>
+                            <li class="dropdown"><a href="our-team.html" class="a-menu">the team</a>
+                                            
+                            </li>
+                            <li class="dropdown"><a href="buy-avan.html" class="a-menu">buy a van</a>
+                                            
+                            </li>
+                            <li class="dropdown"><a href="joinus.html" class="a-menu">join us</a>
+                                            
+                            </li>
+                            <li class="dropdown "><a href="FAQ.html" class="a-menu">faq</a>
+                                            
+                            </li>
+                            <li class="dropdown"><a href="blog.html" class="a-menu">blog</a>
+                                        
+                            </li>
+                            <li class="dropdown"><a href="login.html" class="a-menu">log in</a>
+                                         
+                            </li>
+                            <li class="dropdown"><a href="Book_Now.html" class="a-menu"> book now</a>     </li>
+                            <li><a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a></li>
+                        </ul>
+                    </div><!-- end navbar collapse -->
+                </div><!-- end container -->
+            </nav><!-- end navbar -->        
+            
+            <div class="sidenav-content">
+                <div id="mySidenav" class="sidenav" >
+                    <div id="main-menu">
+                        <div class="closebtn">
+                            <button class="btn btn-default" id="closebtn">&times;</button>
+                        </div><!-- end close-btn -->
+                        
+                        <div class="list-group panel">
+                        
+                            <a href=index.html" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home</a>
+                            
+                            
+                            <a href="#flights-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-plane link-icon"></i></span>Our Fleet<span><i class="fa fa-chevron-down arrow"></i></span></a>
+                            <div class="collapse sub-menu" id="flights-links">
+                                <a href="All_Fleet.html" class="list-group-item">All</a>
+                                <a href="Deluxe.html" class="list-group-item">Deluxe</a>
+                                <a href="Deluxe+.html" class="list-group-item">Deluxe+</a>
+                                <a href="Prestige.html" class="list-group-item">Prestige</a>
+                                <a href="Prestige+.html" class="list-group-item">Prestige+</a>
+                                <a href="Platinum.html" class="list-group-item">Platinum</a>
+                                <a href="Platinum+.html" class="list-group-item">Platinum+</a>
+                            </div><!-- end sub-menu -->
+                            
+                            <a href="our-team.html" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-building link-icon"></i></span>The Team</a>
+                           
+                            
+                            <a href="buy-avan.html" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Buy A VAN</a>
+                          
+                            
+                            <a href="Joinus.html" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-ship link-icon"></i></span>Join Us</a>
+                          
+                            
+                            <a href="FAQ.html" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-car link-icon"></i></span>FAQ</a>
+                           
+                            
+                            <a href="blog.html" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-clone link-icon"></i></span>Blog</a>
+                           
+                            <a href="login.html" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-clone link-icon"></i></span>Log In</a>
+                            <a href="Book_Now.html" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-clone link-icon"></i></span>Book Now</a>
+                        </div><!-- end list-group -->
+                    </div><!-- end main-menu -->
+                </div><!-- end mySidenav -->
+            </div><!-- end sidenav-content -->
+        
+        <div class="sidenav-content">
+            <div id="mySidenav" class="sidenav" >
+                <h2 id="web-name"><span><i class="fa fa-plane"></i></span>Star Travel</h2>
+
+                <div id="main-menu">
+                	<div class="closebtn">
+                        <button class="btn btn-default" id="closebtn">&times;</button>
+                    </div><!-- end close-btn -->
+                    
+                    <div class="list-group panel">
+                    
+                        <a href="#home-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home<span><i class="fa fa-chevron-down arrow"></i></span></a>
+                        <div class="collapse sub-menu" id="home-links">
+                            <a href="index.html" class="list-group-item">Main Homepage</a>
+                            <a href="flight-homepage.html" class="list-group-item">Flight Homepage</a>
+                            <a href="hotel-homepage.html" class="list-group-item">Hotel Homepage</a>
+                            <a href="tour-homepage.html" class="list-group-item">Tour Homepage</a>
+                            <a href="cruise-homepage.html" class="list-group-item">Cruise Homepage</a>
+                            <a href="car-homepage.html" class="list-group-item">Car Homepage</a>
+                            <a href="landing-page.html" class="list-group-item">Landing Page</a>
+                        </div><!-- end sub-menu -->
+                        
+                        <a href="#flights-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-plane link-icon"></i></span>Flights<span><i class="fa fa-chevron-down arrow"></i></span></a>
+                        <div class="collapse sub-menu" id="flights-links">
+                            <a href="flight-homepage.html" class="list-group-item">Flight Homepage</a>
+                            <a href="flight-listing-left-sidebar.html" class="list-group-item">List View Left Sidebar</a>
+                            <a href="flight-listing-right-sidebar.html" class="list-group-item">List View Right Sidebar</a>
+                            <a href="flight-grid-left-sidebar.html" class="list-group-item">Grid View Left Sidebar</a>
+                            <a href="flight-grid-right-sidebar.html" class="list-group-item">Grid View Right Sidebar</a>
+                            <a href="flight-detail-left-sidebar.html" class="list-group-item">Detail Left Sidebar</a>
+                            <a href="flight-detail-right-sidebar.html" class="list-group-item">Detail Right Sidebar</a>
+                        </div><!-- end sub-menu -->
+                        
+                        <a href="#hotels-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-building link-icon"></i></span>Hotels<span><i class="fa fa-chevron-down arrow"></i></span></a>
+                        <div class="collapse sub-menu" id="hotels-links">
+                            <a href="hotel-homepage.html" class="list-group-item">Hotel Homepage</a>
+                            <a href="hotel-listing-left-sidebar.html" class="list-group-item">List View Left Sidebar</a>
+                            <a href="hotel-listing-right-sidebar.html" class="list-group-item">List View Right Sidebar</a>
+                            <a href="hotel-grid-left-sidebar.html" class="list-group-item">Grid View Left Sidebar</a>
+                            <a href="hotel-grid-right-sidebar.html" class="list-group-item">Grid View Right Sidebar</a>
+                            <a href="hotel-detail-left-sidebar.html" class="list-group-item">Detail Left Sidebar</a>
+                            <a href="hotel-detail-right-sidebar.html" class="list-group-item">Detail Right Sidebar</a>
+                        </div><!-- end sub-menu -->
+                        
+                        <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Tours<span><i class="fa fa-chevron-down arrow"></i></span></a>
+                        <div class="collapse sub-menu" id="tours-links">
+                            <a href="tour-homepage.html" class="list-group-item">Tour Homepage</a>
+                            <a href="tour-listing-left-sidebar.html" class="list-group-item">List View Left Sidebar</a>
+                            <a href="tour-listing-right-sidebar.html" class="list-group-item">List View Right Sidebar</a>
+                            <a href="tour-grid-left-sidebar.html" class="list-group-item">Grid View Left Sidebar</a>
+                            <a href="tour-grid-right-sidebar.html" class="list-group-item">Grid View Right Sidebar</a>
+                            <a href="tour-detail-left-sidebar.html" class="list-group-item">Detail Left Sidebar</a>
+                            <a href="tour-detail-right-sidebar.html" class="list-group-item">Detail Right Sidebar</a>
+                        </div><!-- end sub-menu -->
+                        
+                        <a href="#cruise-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-ship link-icon"></i></span>Cruise<span><i class="fa fa-chevron-down arrow"></i></span></a>
+                        <div class="collapse sub-menu" id="cruise-links">
+                            <a href="cruise-homepage.html" class="list-group-item">Cruise Homepage</a>
+                            <a href="cruise-listing-left-sidebar.html" class="list-group-item">List View Left Sidebar</a>
+                            <a href="cruise-listing-right-sidebar.html" class="list-group-item">List View Right Sidebar</a>
+                            <a href="cruise-grid-left-sidebar.html" class="list-group-item">Grid View Left Sidebar</a>
+                            <a href="cruise-grid-right-sidebar.html" class="list-group-item">Grid View Right Sidebar</a>
+                            <a href="cruise-detail-left-sidebar.html" class="list-group-item">Detail Left Sidebar</a>
+                            <a href="cruise-detail-right-sidebar.html" class="list-group-item">Detail Right Sidebar</a>
+                        </div><!-- end sub-menu -->
+                        
+                        <a href="#cars-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-car link-icon"></i></span>Cars<span><i class="fa fa-chevron-down arrow"></i></span></a>
+                        <div class="collapse sub-menu" id="cars-links">
+                            <a href="car-homepage.html" class="list-group-item">Car Homepage</a>
+                            <a href="car-listing-left-sidebar.html" class="list-group-item">List View Left Sidebar</a>
+                            <a href="car-listing-right-sidebar.html" class="list-group-item">List View Right Sidebar</a>
+                            <a href="car-grid-left-sidebar.html" class="list-group-item">Grid View Left Sidebar</a>
+                            <a href="car-grid-right-sidebar.html" class="list-group-item">Grid View Right Sidebar</a>
+                            <a href="car-detail-left-sidebar.html" class="list-group-item">Detail Left Sidebar</a>
+                            <a href="car-detail-right-sidebar.html" class="list-group-item">Detail Right Sidebar</a>
+                        </div><!-- end sub-menu -->
+                        
+                        <a href="#pages-links" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-clone link-icon"></i></span>Pages<span><i class="fa fa-chevron-down arrow"></i></span></a>
+                        <div class="collapse sub-menu" id="pages-links">
+                        	<div class="list-group-heading list-group-item">Standard <span>Pages</span></div>
+                            <a href="about-us.html"  class="list-group-item">About Us</a>
+                            <a href="contact-us.html"  class="list-group-item">Contact Us</a>
+                            <a href="blog-listing-left-sidebar.html"  class="list-group-item">Blog Listing Left Sidebar</a>
+                            <a href="#"  class="list-group-item active">Blog Listing Right Sidebar</a>
+                            <a href="blog-detail-left-sidebar.html"  class="list-group-item">Blog Detail Left Sidebar</a>
+                            <a href="blog-detail-right-sidebar.html"  class="list-group-item">Blog Detail Right Sidebar</a>
+                            <div class="list-group-heading list-group-item">User <span>Dashboard</span></div>
+                            <a href="dashboard.html"  class="list-group-item">Dashboard</a>
+                            <a href="user-profile.html"  class="list-group-item">User Profile</a>
+                            <a href="booking.html"  class="list-group-item">Booking</a>
+                            <a href="wishlist.html"  class="list-group-item">Wishlist</a>
+                            <a href="cards.html"  class="list-group-item">Cards</a>
+                            <div class="list-group-heading list-group-item">Special <span>Pages</span></div>
+                            <a href="login.html"  class="list-group-item">Login</a>
+                            <a href="registration.html"  class="list-group-item">Registration</a>
+                            <a href="forgot-password.html"  class="list-group-item">Forgot Password</a>
+                            <a href="error-page.html"  class="list-group-item">404 Page</a>
+                            <a href="coming-soon.html"  class="list-group-item">Coming Soon</a>
+                            <div class="list-group-heading list-group-item">Extra <span>Pages</span></div>
+                            <a href="before-you-fly.html" class="list-group-item">Before Fly</a>
+                            <a href="travel-insurance.html" class="list-group-item">Travel Insurance</a>
+                            <a href="holidays.html" class="list-group-item">Holidays</a>
+                            <a href="thank-you.html" class="list-group-item">Thank You</a>
+                        </div><!-- end sub-menu -->
+                    </div><!-- end list-group -->
+                </div><!-- end main-menu -->
+            </div><!-- end mySidenav -->
+        </div><!-- end sidenav-content -->
+        
+        
+        
+        
+        <!--==== INNERPAGE-WRAPPER =====-->
+        <section class="innerpage-wrapper">
+
+        	<div id="blog-listings" class="innerpage-section-padding">
+        		<div class="container">
+        			<div class="row">
+                    	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 content-side">
+                        	<div class="space-right">
+                            
+                                <div class="main-block blog-post blog-list">
+                                    <div class="main-img blog-post-img">
+                                    	<a href="blog-detail-right-sidebar.html">
+                                        	<img src="images/6bce9b33-02ba-4956-b431-131896efa2f0.jpg" class="img-responsive" alt="blog-post-image" />
+                                        </a>
+                                        <div class="main-mask blog-post-info">
+                                            <ul class="list-inline list-unstyled blog-post-info">
+                                                <li><span><i class="fa fa-calendar"></i></span>July 30, 2017</li>
+                                                <li><span><i class="fa fa-user"></i></span>By: <a href="#">John Smith</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end blog-post-img -->
+                                    
+                                    <div class="blog-post-detail">
+                                        <h2 class="blog-post-title"><a href="blog-detail-right-sidebar.html">The perfect summer destinations</a></h2>
+                                        <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper. Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper.</p>
+                                        <a href="blog-detail-right-sidebar.html" class="btn btn-orange">View More</a>
+                                    </div><!-- end blog-post-detail -->
+                                </div><!-- end blog-post -->
+                                
+                                <div class="main-block blog-post blog-list">
+                                    <div class="main-img blog-post-img">
+                                        <a href="#">
+                                        	<img src="images/1c8f4638-8522-4d01-9fba-2411ec157d2a.jpg" class="img-responsive" alt="blog-post-image" />
+                                        </a>
+                                        <div class="main-mask">
+                                            <ul class="list-inline list-unstyled blog-post-info">
+                                                <li><span><i class="fa fa-calendar"></i></span>July 30, 2017</li>
+                                                <li><span><i class="fa fa-user"></i></span>By: <a href="#">John Smith</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end blog-post-img -->
+                                    
+                                    <div class="blog-post-detail">
+                                        <h2 class="blog-post-title"><a href="blog-detail-right-sidebar.html">The perfect summer destinations</a></h2>
+                                        <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper. Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper.</p>
+                                        <a href="blog-detail-right-sidebar.html" class="btn btn-orange">View More</a>
+                                    </div><!-- end blog-post-detail -->
+                                </div><!-- end blog-post -->
+                                
+                                <div class="main-block blog-post blog-list">
+                                    <div class="main-img blog-post-img">
+                                        <a href="#">
+                                        	<img src="images/881bf9cb-dd8a-4339-bbc5-5c380add04ce.jpg" class="img-responsive" alt="blog-post-image" />
+                                        </a>
+                                        <div class="main-mask">
+                                            <ul class="list-inline list-unstyled blog-post-info">
+                                                <li><span><i class="fa fa-calendar"></i></span>July 30, 2017</li>
+                                                <li><span><i class="fa fa-user"></i></span>By: <a href="#">John Smith</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- end blog-post-img -->
+                                    
+                                    <div class="blog-post-detail">
+                                       <h2 class="blog-post-title"><a href="blog-detail-right-sidebar.html">The perfect summer destinations</a></h2>
+                                        <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper. Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper.</p>
+                                        <a href="blog-detail-right-sidebar.html" class="btn btn-orange">View More</a>
+                                    </div><!-- end blog-post-detail -->
+                                </div><!-- end blog-post -->
+                                
+                                <div class="pages">
+                                    <ol class="pagination">
+                                        <li><a href="#" aria-label="Previous"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#" aria-label="Next"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a></li>
+                                    </ol>
+                                </div><!-- end pages -->
+                            
+                            </div><!-- end space-right -->
+                        </div><!-- end columns -->
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 side-bar blog-sidebar right-side-bar">
+                            <div class="row">
+                            	
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="side-bar-block main-block ad-block">
+                                        
+                                    </div><!-- end side-bar-block -->
+                                </div><!-- end columns -->  
+                                    
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    
+                                    </div><!-- end side-bar-block --><div class="side-bar-block instagram">
+                                       
+                                </div><!-- end columns -->                             
+                            </div><!-- end row -->
+                                
+                            <div class="row">    
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="side-bar-block contact">
+                                        <h2 class="side-bar-heading">Contact Us</h2>
+                                        <div class="c-list">
+                                            <div class="icon"><span><i class="fa fa-envelope"></i></span></div>
+                                            <div class="text"><p>support@star-hotel.com</p></div>
+                                        </div><!-- end c-list -->
+                                        
+                                        <div class="c-list">
+                                            <div class="icon"><span><i class="fa fa-phone"></i></span></div>
+                                            <div class="text"><p>+222 – 5548 656</p></div>
+                                        </div><!-- end c-list -->
+                                        
+                                        <div class="c-list">
+                                            <div class="icon"><span><i class="fa fa-map-marker"></i></span></div>
+                                            <div class="text"><p>Street No: 1234/A, Blu Vard Area, Main Double Road, UK</p></div>
+                                        </div><!-- end c-list -->
+                                    </div><!-- end side-bar-block -->
+                                </div><!-- end columns -->
+                            
+                            	<div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="side-bar-block recent-post">
+                                        <h2 class="side-bar-heading">Recent Post</h2>
+
+                                        <div class="recent-block">
+                                            <div class="recent-img">
+                                                <a href="blog-details.html"><img src="images/0ca8de3d-a5c7-46c0-ae65-ed85d1393f6f.jpg" class="img-reponsive" alt="recent-blog-image" width="62px" height="67px"/></a>
+                                            </div><!-- end recent-img -->
+                                            
+                                            <div class="recent-text">
+                                                <a href="blog-detail-right-sidebar.html"><h5>Host a Family  Party</h5></a>
+                                                <span class="date">27 May, 2017</span>
+                                            </div><!-- end recent-text -->
+                                        </div><!-- end recent-block -->
+
+                                        <div class="recent-block">
+                                            <div class="recent-img">
+                                               <a href="blog-details.html"><img src="images/0ca8de3d-a5c7-46c0-ae65-ed85d1393f6f.jpg" class="img-reponsive" alt="recent-blog-image" width="62px" height="67px"/></a>
+                                            </div><!-- end recent-img -->
+                                            
+                                            <div class="recent-text">
+                                                <a href="blog-detail-right-sidebar.html"><h5>Host a Family  Party</h5></a>
+                                                <span class="date">27 May, 2017</span>
+                                            </div><!-- end recent-text -->
+                                        </div><!-- end recent-block -->
+
+                                        <div class="recent-block">
+                                            <div class="recent-img">
+                                                <a href="blog-details.html"><img src="images/0ca8de3d-a5c7-46c0-ae65-ed85d1393f6f.jpg" class="img-reponsive" alt="recent-blog-image" width="62px" height="67px"/></a>
+                                            </div><!-- end recent-img -->
+                                            
+                                            <div class="recent-text">
+                                                <a href="blog-detail-right-sidebar.html"><h5>Host a Family  Party</h5></a>
+                                                <span class="date">27 May, 2017</span>
+                                            </div><!-- end recent-text -->
+                                        </div><!-- end recent-block -->
+
+                                    </div><!-- end side-bar-block -->
+                                </div><!-- end columns -->
+							</div><!-- end row -->
+                        </div><!-- end columns -->
+                        
+                    </div><!-- end row -->
+        		</div><!-- end container -->
+        	</div><!-- end blog-listings -->
+        </section><!-- end innerpage-wrapper -->  
+        
+        <!--======================= FOOTER =======================-->
+        <section id="footer" class="ftr-heading-o ftr-heading-mgn-1">
+
+            <div id="footer-bottom" class="ftr-bot-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="copyright">
+                            <p class="copyp">© 2018 <a href="#">Caravans</a>. All rights reserved.</p>
+                            <img src="images/payment-method.png" alt="Payment Method" style="width:400px;">
+                        </div><!-- end columns -->
+                        
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="terms">
+                                <ul class="social-links list-inline list-unstyled">
+                                <li><a href="#"><span><i class="fa fa-facebook"></i></span></a></li>
+                                
+                                <li><a href="#"><span><i class="fa fa-google-plus"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-twitter"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-youtube"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-linkedin"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-rss"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-envelope"></i></span></a></li>
+                            </ul>
+                            
+                        </div><!-- end columns -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end footer-bottom -->
+            
+        </section><!-- end footer -->
+        
+        
+        <!-- Page Scripts Starts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom-navigation.js"></script>
+        <!-- Page Scripts Ends -->
+        
+	</body>
+</html>
